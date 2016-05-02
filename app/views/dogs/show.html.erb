@@ -16,18 +16,23 @@
 </p>
 
 <p>
+  <strong>Info:</strong>
+  <%= @dog.info %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @dog.breed %>
+</p>
+
+<p>
   <strong>Owner:</strong>
-  <%= @dog.owner_id %>
+  <%= @dog.owner %>
 </p>
 
 <p>
   <strong>Vet:</strong>
-  <%= @dog.vet_id %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @dog.info %>
+  <%= @dog.vet %>
 </p>
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |

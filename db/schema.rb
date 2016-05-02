@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160502152000) do
+ActiveRecord::Schema.define(version: 20160502152708) do
 
   create_table "breeds", force: :cascade do |t|
     t.string   "name"
@@ -21,19 +21,19 @@ ActiveRecord::Schema.define(version: 20160502152000) do
 
   create_table "dogs", force: :cascade do |t|
     t.string   "name"
-    t.date     "dob"
+    t.string   "dob"
     t.boolean  "checked_in"
-    t.integer  "owner_id_id"
-    t.integer  "vet_id_id"
     t.text     "info"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "breed_id_id"
+    t.integer  "breed_id"
+    t.integer  "owner_id"
+    t.integer  "vet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "dogs", ["breed_id_id"], name: "index_dogs_on_breed_id_id"
-  add_index "dogs", ["owner_id_id"], name: "index_dogs_on_owner_id_id"
-  add_index "dogs", ["vet_id_id"], name: "index_dogs_on_vet_id_id"
+  add_index "dogs", ["breed_id"], name: "index_dogs_on_breed_id"
+  add_index "dogs", ["owner_id"], name: "index_dogs_on_owner_id"
+  add_index "dogs", ["vet_id"], name: "index_dogs_on_vet_id"
 
   create_table "owners", force: :cascade do |t|
     t.string   "first_name"

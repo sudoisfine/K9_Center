@@ -5,9 +5,10 @@
     <%= f.input :name %>
     <%= f.input :dob %>
     <%= f.input :checked_in %>
-    <%= f.association :owner_id %>
-    <%= f.association :vet_id %>
     <%= f.input :info %>
+    <%= f.association :breed %>
+    <%= f.association :owner %>
+    <%= f.association :vet %>
   </div>
 
   <div class="form-actions">

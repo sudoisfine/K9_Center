@@ -25,5 +25,12 @@
   <%= @owner.emergency_phone %>
 </p>
 
+<p><strong>Dogs owned by <%= @owner.first_name + " " + @owner.last_name %></strong></p>
+<ul>
+  <% @owner.dogs.order('name').each do |dog| %>
+    <li> <%= dog.name %> </li>
+    <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_owner_path(@owner) %> |
 <%= link_to 'Back', owners_path %>

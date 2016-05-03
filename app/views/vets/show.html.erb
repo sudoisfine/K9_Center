@@ -15,5 +15,12 @@
   <%= @vet.phone %>
 </p>
 
+
+<p><strong>Dogs under the care of <%= @vet.doctor %></strong></p>
+<ul>
+  <% @vet.dogs.order('name').each do |dog| %>
+    <li> <%= dog.name %> </li>
+    <% end %>
+</ul>
 <%= link_to 'Edit', edit_vet_path(@vet) %> |
 <%= link_to 'Back', vets_path %>

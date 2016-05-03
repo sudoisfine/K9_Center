@@ -16,3 +16,18 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Allerta+Stencil);
+
+
+body {
+  background-color: #f2f2f2;
+}
+
+h1 {
+  font-family: 'Allerta Stencil', sans-serif;
+  color: #046;
+}
+
+.table.table-striped {
+  background-color: #f2f2f2;
+}

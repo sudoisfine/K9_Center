@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Dogs</h1>
+<h1>K9 Center Dogs</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -23,9 +23,9 @@
         <td><%= dog.dob %></td>
         <td><%= dog.checked_in %></td>
         <td><%= dog.info %></td>
-        <td><%= dog.breed %></td>
-        <td><%= dog.owner %></td>
-        <td><%= dog.vet %></td>
+        <td><%= dog.breed.try (:name) %></td>
+        <td><%= dog.owner.try (:last_name) %></td>
+        <td><%= dog.vet.try(:doctor) %></td>
         <td><%= link_to 'Show', dog %></td>
         <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
         <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>

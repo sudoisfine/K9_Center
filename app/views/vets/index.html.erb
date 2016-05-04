@@ -18,9 +18,9 @@
         <td><%= vet.doctor %></td>
         <td><%= vet.clinic %></td>
         <td><%= vet.phone %></td>
-        <td><%= link_to 'Show', vet %></td>
-        <td><%= link_to 'Edit', edit_vet_path(vet) %></td>
-        <td><%= link_to 'Destroy', vet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (fa_icon "eye"), vet %></td>
+        <td><%= link_to (fa_icon "pencil-square-o"), edit_vet_path(vet) %></td>
+        <td><%= link_to (fa_icon "trash-o"), vet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Vet', new_vet_path %>
+<%= link_to('Add a Vet', new_vet_path, class: 'btn btn-large btn-secondary')  %>

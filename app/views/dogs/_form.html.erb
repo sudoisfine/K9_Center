@@ -1,6 +1,7 @@
 <%= simple_form_for(@dog) do |f| %>
   <%= f.error_notification %>
 
+  <div class ="views">
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :dob %>
@@ -15,3 +16,4 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+</div>

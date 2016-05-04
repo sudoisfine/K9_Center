@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="views">
 <h1>K9 Center Dogs</h1>
 
 <table class="table table-striped">
@@ -28,9 +29,9 @@
         <td><%= dog.breed.try (:name) %></td>
         <td><%= dog.owner.name %></td>
         <td><%= dog.vet.doctor %></td>
-        <td><%= link_to 'Show', dog %></td>
-        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
-        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (fa_icon "eye"), dog %></td>
+        <td><%= link_to (fa_icon "pencil-square-o"), edit_dog_path(dog) %></td>
+        <td><%= link_to (fa_icon "trash-o"), dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +39,5 @@
 
 <br>
 
-<%= link_to 'New Dog', new_dog_path %>
+<%= link_to('Add a Dog', new_dog_path, class: 'btn btn-large btn-secondary')  %>
+</div>

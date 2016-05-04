@@ -21,11 +21,13 @@
       <tr>
         <td><%= dog.name %></td>
         <td><%= dog.dob %></td>
-        <td><%= dog.checked_in %></td>
+        <td><% if dog.checked_in ==true %>
+            <%= fa_icon "paw" %>
+          <% end %></td>
         <td><%= dog.info %></td>
         <td><%= dog.breed.try (:name) %></td>
-        <td><%= dog.owner.try (:last_name) %></td>
-        <td><%= dog.vet.try(:doctor) %></td>
+        <td><%= dog.owner.name %></td>
+        <td><%= dog.vet.doctor %></td>
         <td><%= link_to 'Show', dog %></td>
         <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
         <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>

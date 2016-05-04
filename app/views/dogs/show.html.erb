@@ -12,7 +12,11 @@
 
 <p>
   <strong>Checked in:</strong>
-  <%= @dog.checked_in %>
+  <% if @dog.checked_in ==true %>
+            <%= "Yes" %>
+            <% else %>
+            <%= "No" %>
+          <% end %>
 </p>
 
 <p>
